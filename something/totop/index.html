@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>totop</title>
+    <style>
+        .to-top {
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            border-radius: 50%;
+            background-color: transparent;
+            outline: none;
+            background-image: url(./img/packup.png);
+            background-repeat: no-repeat;
+            background-position: 50%;
+            box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+        }
+        .to-top:hover{
+            background-color: rgba(0, 0 , 0, 1);
+            background-image: url(./img/packup1.png);
+            background-repeat: no-repeat;
+            background-position: 50%;
+        }
+    </style>
+</head>
+
+<body style="height:2000px">
+    <div>
+        <button class='to-top'>
+        </button>
+    </div>
+</body>
+<script>
+    window.onload = function () {
+        var timer = null;
+        var bSys = true;
+
+        var oBtn = document.getElementsByClassName('to-top')[0];
+
+        //如何检测用户滚动页面
+        window.onscroll = function () {
+            if (!bSys) {
+                clearInterval(timer);
+
+            }
+            bSys = false;
+
+        }
+        //谷歌用body.scrollTop
+        oBtn.onclick = function () {
+            timer = setInterval(function () {
+                var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                var iSpeed = Math.floor(-scrollTop / 8);
+                if (document.body.scrollTop) {
+                    document.body.scrollTop = scrollTop + iSpeed;
+
+                } else {
+                    document.documentElement.scrollTop = scrollTop + iSpeed;
+
+                }
+                if (scrollTop == 0) {
+                    clearInterval(timer);
+                }
+                bSys = true;
+
+
+            }, 30)
+        }
+    }
+
+</script>
+
+</html>
