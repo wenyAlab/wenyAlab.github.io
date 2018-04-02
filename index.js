@@ -42,7 +42,7 @@ const  data = [
         [
             { title : 'date'},
             { url : 'date/simple_calendar/index.html', title : '简单日历' },
-            { url : 'date/calendar/index.html', title : '日历' }
+            { url : 'date/calendar/index.html', title : '全日历' }
         ],
         [
             { title : 'other'},
