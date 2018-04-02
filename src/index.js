@@ -1,5 +1,4 @@
 import '../style/common.css';
-import '../style/detials.css';
 let str = '';
             
 const  data = [
