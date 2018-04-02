@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>无缝滚动</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .img-box{
+            width: 1350px;
+            overflow: hidden;
+            margin: 0 auto;
+            height: 270px;
+        }
+        .img-container{
+            width: 100%;
+            position: relative;
+            height: 100%;
+        }
+        .img-list{
+            list-style: none;
+            position: absolute;
+        }
+        .img-list:before{
+            content:'';
+            display: block;
+            clear: both;
+        }
+        .img-item{
+            float: left;
+        }
+        .left{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            top: 45%;
+            left: 0;
+            z-index: 1;
+            background-image: url(./img/left.png);
+            background-repeat: no-repeat;
+            background-color: rgba(0, 0,0, .4);
+            background-position: 50%;
+            border-radius: 50%;
+
+        }
+        .right{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            top: 45%;
+            right: 0;
+            z-index: 1;
+            background-image: url(./img/right.png);
+            background-repeat: no-repeat;
+            background-color: rgba(0, 0,0, .4);
+            background-position: 50%;
+            border-radius: 50%;
+           
+        }
+    </style>
+    
+</head>
+<body>
+    <div class = 'img-box'>
+        <div class = 'img-container'>
+            <div class  = 'left'><div class = 'left-btn'></div></div>
+            <div class = 'right'><div class = 'right-btn'></div></div>
+            <ul class = 'img-list'>
+                <li class = 'img-item'><img src="./img/img1.jpg" alt=""></li>
+                <li class = 'img-item'><img src="./img/img2.jpg" alt=""></li>
+                <li class = 'img-item'><img src="./img/img3.jpg" alt=""></li>
+                <li class = 'img-item'><img src="./img/img4.jpg" alt=""></li>
+                <li class = 'img-item'><img src="./img/img5.jpg" alt=""></li>
+
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+        window.onload = function() {
+            var imgBox = document.getElementsByClassName('img-box')[0];
+            var imgList = document.getElementsByClassName('img-list')[0];
+            var imgItem = document.getElementsByClassName('img-item');
+            var leftBtn = document.getElementsByClassName('left')[0];
+            var rightBtn = document.getElementsByClassName('right')[0];
+            imgList.innerHTML += imgList.innerHTML;
+            imgList.style.width = imgItem[0].offsetWidth * imgItem.length + 'px';
+            
+            
+            var timer = null;
+            
+            var speed = -5;
+             leftBtn.onclick = function(){
+                 speed = -5;
+
+             }
+             rightBtn.onclick = function(){
+                 speed = 5;
+             }
+               
+            timer = setInterval(function(){
+                imgList.offsetLeft += speed;
+                imgList.style.left = imgList.offsetLeft + speed + 'px';
+                
+                
+
+                if(imgList.offsetLeft < -imgList.offsetWidth / 2){
+
+                    imgList.style.left = '0';
+                
+
+                }else if(imgList.offsetLeft > 0){
+
+                    imgList.style.left = -imgList.offsetWidth / 2 + 'px';
+                }
+            },30)
+            
+            imgList.onmouseout = function(){
+                timer = setInterval(function(){
+                    
+                    imgList.offsetLeft += speed;
+                    imgList.style.left = imgList.offsetLeft + speed + 'px';
+                    
+                    if(imgList.offsetLeft < -imgList.offsetWidth / 2){
+
+                        imgList.style.left = '0';
+                    }else if(imgList.offsetLeft > 0){
+
+                        imgList.style.left = -imgList.offsetWidth / 2 + 'px';
+                    }
+
+                    
+                    
+                },30)
+            }
+            imgList.onmouseover = function(){
+                clearInterval(timer);
+            }
+            
+        }
+
+
+
+
+    </script>
+</html>
