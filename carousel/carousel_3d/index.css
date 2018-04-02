@@ -1,0 +1,293 @@
+.banner-box {
+    width: 1200px;
+    height: 300px;
+    position: absolute;
+    overflow: hidden;
+    perspective: 1000;
+    -webkit-perspective: 1000;
+    margin-left: 100px;
+  }
+  .left-click {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 300px;
+    z-index: 100;
+    opacity: 0.3;
+  }
+  .right-click {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 300px;
+    z-index: 100;
+    opacity: 0.3;
+  }
+  .center {
+    z-index: 100;
+    position: absolute;
+    top: 50px;
+    right: 300px;
+    height: 200px;
+    width: 600px;
+    opacity: 0;
+  }
+  /*初始化banner*/
+  .banner {
+    position: absolute;
+    display: block;
+    box-shadow: 5px 5px 20px #7F7F7F;
+  }
+  /*图片*/
+  .img {
+    width: 100%;
+    height: 100%;
+    background-position:50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  /*初始化定位*/
+  #first {
+    opacity: 0;
+    z-index: 10;
+    left: -100px;
+    height: 120px;
+    width: 360px;
+    top: 50%;
+    margin-top: -60px;
+    transform: rotateY(50deg);
+  }
+  #second {
+    z-index: 20;
+    left: 100px;
+    height: 120px;
+    width: 360px;
+    top: 50%;
+    margin-top: -60px;
+    transform: rotateY(50deg);
+  }
+  #third {
+    z-index: 50;
+    left: 300px;
+    right: 300px;
+    height: 200px;
+    width: 600px;
+    top: 50%;
+    margin-top: -100px;
+  }
+  #fourth {
+    z-index: 20;
+    right: 100px;
+    height: 120px;
+    width: 360px;
+    top: 50%;
+    margin-top: -60px;
+    transform: rotateY(-50deg);
+  }
+  #fifth {
+    right: -100px;
+    height: 120px;
+    width: 360px;
+    top: 50%;
+    margin-top: -60px;
+    transform: rotateY(-50deg);
+  }
+  /*动画*/
+  /*first move to second */
+  @keyframes first-second {
+    0% {
+      opacity: 0;
+      z-index: 20;
+      left: -100px;
+      height: 120px;
+      width: 360px;
+      top: 50%;
+      margin-top: -60px;
+      transform: rotateY(50deg);
+    }
+    100% {
+      z-index: 20;
+      left: 100px;
+      height: 120px;
+      width: 360px;
+      top: 50%;
+      margin-top: -60px;
+      transform: rotateY(50deg);
+    }
+  }
+  @keyframes second-third {
+    0% {
+      z-index: 50;
+      left: 100px;
+      height: 120px;
+      width: 360px;
+      top: 50%;
+      margin-top: -60px;
+      transform: rotateY(50deg);
+    }
+    100% {
+      z-index: 50;
+      left: 300px;
+      height: 200px;
+      width: 600px;
+      top: 50%;
+      margin-top: -100px;
+    }
+  }
+  @keyframes third-fourth {
+    0% {
+      z-index: 20;
+      right: 300px;
+      height: 200px;
+      width: 600px;
+      top: 50%;
+      margin-top: -100px;
+    }
+    100% {
+      z-index: 20;
+      right: 100px;
+      height: 120px;
+      width: 360px;
+      top: 50%;
+      margin-top: -60px;
+      transform: rotateY(-50deg);
+    }
+  }
+  @keyframes fourth-fifth {
+    0% {
+      z-index: 10;
+      right: 100px;
+      height: 120px;
+      width: 360px;
+      top: 50%;
+      margin-top: -60px;
+      transform: rotateY(-50deg);
+    }
+    100% {
+      opacity: 0;
+      z-index: 10;
+      right: -100px;
+      height: 120px;
+      width: 360px;
+      top: 50%;
+      margin-top: -60px;
+      transform: rotateY(-50deg);
+    }
+  }
+  @keyframes fifth-fourth {
+    0% {
+      opacity: 0;
+      z-index: 20;
+      right: -100px;
+      height: 120px;
+      width: 360px;
+      top: 50%;
+      margin-top: -60px;
+      transform: rotateY(-50deg);
+    }
+    100% {
+      z-index: 20;
+      right: 100px;
+      height: 120px;
+      width: 360px;
+      top: 50%;
+      margin-top: -60px;
+      transform: rotateY(-50deg);
+    }
+  }
+  @keyframes fourth-third {
+    0% {
+      z-index: 50;
+      right: 100px;
+      height: 120px;
+      width: 360px;
+      top: 50%;
+      margin-top: -60px;
+      transform: rotateY(-50deg);
+    }
+    100% {
+      z-index: 50;
+      right: 300px;
+      height: 200px;
+      width: 600px;
+      top: 50%;
+      margin-top: -100px;
+    }
+  }
+  @keyframes third-second {
+    0% {
+      z-index: 20;
+      left: 300px;
+      height: 200px;
+      width: 600px;
+      top: 50%;
+      margin-top: -100px;
+    }
+    100% {
+      z-index: 20;
+      left: 100px;
+      height: 120px;
+      width: 360px;
+      top: 50%;
+      margin-top: -60px;
+      transform: rotateY(50deg);
+    }
+  }
+  @keyframes second-first {
+    0% {
+      z-index: 10;
+      left: 100px;
+      height: 120px;
+      width: 360px;
+      top: 50%;
+      margin-top: -60px;
+      transform: rotateY(50deg);
+    }
+    100% {
+      opacity: 0;
+      z-index: 10;
+      left: -100px;
+      height: 120px;
+      width: 360px;
+      top: 50%;
+      margin-top: -60px;
+      transform: rotateY(50deg);
+    }
+  }
+
+  #first-second {
+    animation: first-second .5s;
+    animation-fill-mode: forwards;
+  }
+  #second-third {
+    animation: second-third .5s;
+    animation-fill-mode: forwards;
+  }
+  #third-fourth {
+    animation: third-fourth .5s;
+    animation-fill-mode: forwards;
+  }
+  #fourth-fifth {
+    animation: fourth-fifth .5s;
+    animation-fill-mode: forwards;
+  }
+  #fifth-fourth {
+    animation: fifth-fourth .5s;
+    animation-fill-mode: forwards;
+  }
+  #fourth-third {
+    animation: fourth-third .5s;
+    animation-fill-mode: forwards;
+  }
+  #third-second {
+    animation: third-second .5s;
+    animation-fill-mode: forwards;
+  }
+  #second-first {
+    animation: second-first .5s;
+    animation-fill-mode: forwards;
+  }
