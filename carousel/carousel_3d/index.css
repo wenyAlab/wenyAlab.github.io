@@ -41,6 +41,8 @@
     position: absolute;
     display: block;
     box-shadow: 5px 5px 20px #7F7F7F;
+    border-radius: 10px;
+
   }
   /*图片*/
   .img {
@@ -49,6 +51,7 @@
     background-position:50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 10px;
   }
   /*初始化定位*/
   #first {
