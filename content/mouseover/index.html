@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mouseover</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            margin: 0 auto;
+            width: 100px;
+        }
+        #div1 {
+            width: 100px;
+            background: transparent;
+            border: 1px solid rgb(241, 184, 184);
+            border-radius: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+
+        }
+        #div2 {
+            width: 150px;
+            height: 20px;
+            display: none;
+            margin: 5px;
+        }
+        #div2 > ul{
+            list-style: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class='box'>
+        <div id='div1'>
+            <span>查看更多</span>
+        </div>
+        <div id='div2'>
+            <ul>
+                <li>
+                   关于
+                </li>
+                <li>
+                    设置
+                </li>
+                <li>
+                    详情
+                </li>
+                <li>
+                    其他
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    window.onload = function () {
+        var timer = null;
+
+        var oDiv1 = document.getElementById('div1');
+        var oDiv2 = document.getElementById('div2');
+
+        oDiv1.onmouseover = oDiv2.onmouseover = function () {
+            oDiv2.style.display = 'block';
+            clearTimeout(timer);
+        };
+        oDiv1.onmouseout = oDiv2.onmouseout = function () {
+            timer = setTimeout(function () {
+                oDiv2.style.display = 'none';
+
+            }, 200);
+        }
+    }
+
+
+</script>
+
+</html>
