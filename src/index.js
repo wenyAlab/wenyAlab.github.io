@@ -20,6 +20,8 @@ const  data = [
             { title : 'content'},
             { url : 'content/tab/index.html', title : 'tab切换' },
             { url : 'content/mouseover/index.html', title : '鼠标移入显示移出隐藏' },
+            { url : 'content/single_page/index.html', title : 'single-page react-router' }
+
 
             
             
