@@ -5,38 +5,49 @@ let str = '';
 const  data = [
         [
             { title : 'list'},
-            { url : 'product/todolist/index.html', title : '验证用户' },
+            { url : 'list/timer/index.html', title : '简单计数器--redux' },
+            { url : 'list/dialog/index.html', title : '对话框--面向对象' },
+
            
             
         ],
         [
             { title : 'image'},
-            { url : 'product/todolist/index.html', title : '可添加的下拉选项' },
-            { url : 'product/todolist/index.html', title : '图片放大镜效果' },
+            { url : 'image/index1.html', title : '图片罩层' }
             
         ],
         [
             { title : 'content'},
-            { url : 'product/todolist/index.html', title : '单元行上鼠标悬停提示' },
+            { url : 'content/tab/index.html', title : 'tab切换' },
+            { url : 'content/mouseover/index.html', title : '鼠标移入显示移出隐藏' },
+
             
             
         ],
         [
+            {title:'css3'},
+            { url : 'css3/loadingAnimation.html', title : 'css3实现loading动画' },
+
+        ],
+        [
             { title : 'carousel'},
-            { url : 'product/todolist/index.html', title : '百度爱玩 - 图片轮换' },
-            { url : 'product/todolist/index.html', title : '百度爱玩 - 遮罩' },
-            { url : 'product/todolist/index.html', title : '百度爱玩 - 榜单tab切换' },
+            { url : 'carousel/seamless/index.html', title : '无缝滚动' },
+            { url : 'carousel/singleslide/index.html', title : '滑动轮播' },
+            { url : 'carousel/singleswitch/index.html', title : '切换轮播' },
+            { url : 'carousel/carousel_3d/index.html', title : '3d轮播' },
+
             
         ],
         
         [
-            { title : 'data'},
-            { url : 'product/todolist/index.html', title : '全日历' },
-            { url : 'product/todolist/index.html', title : 'canvas实现' }
+            { title : 'date'},
+            { url : 'date/simple_calendar/index.html', title : '简单日历' },
+            { url : 'date/calendar/index.html', title : '日历' }
         ],
         [
-            { title : 'todoList'},
-            { url : 'product/todolist/index.html', title : 'todoList--react' }
+            { title : 'other'},
+            { url : 'something/todolist/index.html', title : 'todoList--react' },
+            {url:'something/totop/index.html',title:'回到顶部按钮'}
         ],
         [
             {title:'waiting...'}
