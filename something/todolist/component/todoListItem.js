@@ -4,7 +4,7 @@ import Todolistbox from './todoListBox.js';
 import Todolistinput from './todoListInput.js';
 
 import Todolist from './todoList.js';
-import Close from '../img/close.svg';
+import Close from '../img/close.png';
 
 
 export default class Todolistitem extends React.Component{
