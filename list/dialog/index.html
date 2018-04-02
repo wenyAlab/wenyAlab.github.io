@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./index.css" rel="stylesheet" type="text/css">
+    <script src="./index.js"></script>
+    <title>Dialog</title>
+</head>
+
+
+<body>
+    <div class='btns'>
+        <button class='sign-up'>注册</button>
+        <button class='sign-in'>登陆</button>
+        <button class='reset'>重置</button>
+    </div>
+    <div class='banner'></div>
+
+
+
+</body>
+<script>
+    //signUpDialog start
+    var signUpDialog = new Dialog();
+
+    var signUpDialogHeader = new DialogHeader('注册');
+    var signUpDialogBody = new DialogBody();
+    signUpDialogBody.addParams(new DialogBodyParams('手机号', 'text', '手机号码不能为空'));
+    signUpDialogBody.addParams(new DialogBodyParams('密码', 'password', '密码不能为空'));
+    signUpDialogBody.addParams(new DialogBodyParams('用户名', 'text', '用户名不能为空'));
+    signUpDialogBody.addParams(new DialogAnotherBodyElement('同意协议'));
+    var signUpDialogConfirmBtn = new DialogConfirmBtn('注册');
+    var signUpDialogTipsLink = new DialogTipsLink('使用邮箱注册');
+    signUpDialog.setHeader(signUpDialogHeader);
+    signUpDialog.setBody(signUpDialogBody);
+    signUpDialog.setConfirmBtn(signUpDialogConfirmBtn);
+    signUpDialog.setTipsLink(signUpDialogTipsLink);
+    signUpDialog.setClassName('sign-up-box');
+    signUpDialog.show();
+    //signUpDialog end
+
+    // signInDialog start
+    var signInDialog = new Dialog();
+    var signInDialogHeader = new DialogHeader('登陆');
+    var signInDialogBody = new DialogBody();
+    signInDialogBody.addParams(new DialogBodyParams('手机号／邮箱'));
+    signInDialogBody.addParams(new DialogBodyParams('密码'));
+    signInDialogBody.addParams(new DialogAnotherBodyElement('记住密码'));
+    var signInDialogConfirmBtn = new DialogConfirmBtn('确认');
+    var signInDialogTipsLink = new DialogTipsLink('忘记密码');
+    var signUpDialogTipsLink = new DialogTipsLink('使用邮箱注册');
+
+
+
+    signInDialog.setHeader(signInDialogHeader);
+    signInDialog.setBody(signInDialogBody);
+    signInDialog.setConfirmBtn(signInDialogConfirmBtn);
+    signInDialog.setTipsLink(signInDialogTipsLink);
+    signInDialog.setClassName('sign-in-box');
+    signInDialog.show();
+    // signInDialog end
+
+    // resetPasswordDialog start 
+    var resetPasswordDialog = new Dialog();
+    var resetPasswordDialogHeader = new DialogHeader('密码重置');
+    var resetPasswordDialogBody = new DialogBody();
+    resetPasswordDialogBody.addParams(new DialogBodyParams('手机号', 'text'));
+    resetPasswordDialogBody.addParams(new DialogBodyParams('密码', 'password'));
+    resetPasswordDialogBody.addParams(new DialogBodyParams('再次输入密码', 'password'));
+    var resetPasswordDialogConfirmBtn = new DialogConfirmBtn('确定');
+    var resetPasswordDialogTipsLink = new DialogTipsLink('返回登陆');
+
+    resetPasswordDialog.setHeader(resetPasswordDialogHeader);
+    resetPasswordDialog.setBody(resetPasswordDialogBody);
+    resetPasswordDialog.setConfirmBtn(resetPasswordDialogConfirmBtn);
+    resetPasswordDialog.setTipsLink(resetPasswordDialogTipsLink);
+    resetPasswordDialog.setClassName('reset-box');
+    resetPasswordDialog.show();
+    //resetPasswordDialog end
+
+
+
+    window.onload = function () {
+        var signUpBtn = document.getElementsByClassName('sign-up')[0];
+        var signInBtn = document.getElementsByClassName('sign-in')[0];
+        var resetBtn = document.getElementsByClassName('reset')[0];
+        var closeBtn = document.getElementsByClassName('close-btn');
+
+        var signUpBox = document.getElementsByClassName('sign-up-box')[0];
+        var signInBox = document.getElementsByClassName('sign-in-box')[0];
+        var resetBox = document.getElementsByClassName('reset-box')[0];
+        var banner = document.getElementsByClassName('banner')[0];
+
+        signUpBtn.onclick = function (e) {
+            e.preventDefault();
+
+            signUpBox.style.display = 'block';
+            signInBox.style.display = 'none';
+            resetBox.style.display = 'none';
+            banner.style.display = 'block';
+
+        }
+        signInBtn.onclick = function (e) {
+            e.preventDefault();
+
+            signInBox.style.display = 'block';
+            signUpBox.style.display = 'none';
+            resetBox.style.display = 'none';
+            banner.style.display = 'block';
+
+
+        }
+        resetBtn.onclick = function (e) {
+            e.preventDefault();
+
+            resetBox.style.display = 'block';
+            signUpBox.style.display = 'none';
+            signInBox.style.display = 'none';
+            banner.style.display = 'block';
+
+
+        }
+
+        for (var i = 0; i < 3; i++) {
+            closeBtn[i].onclick = function (e) {
+                resetBox.style.display = 'none';
+                signUpBox.style.display = 'none';
+                signInBox.style.display = 'none';
+                banner.style.display = 'none';
+            }
+        }
+
+    }
+</script>
+
+</html>
