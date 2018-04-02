@@ -1,0 +1,125 @@
+html,div,label,input{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.banner{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    display: none;
+    transition: all 0.2s;
+}
+.dialog-box{
+    margin-top: 20px;
+    height: 680px;
+    width: 600px;
+    background-image: url(./img/sign-bg-img.png);
+    background-repeat: no-repeat;
+    background-position: right 32px;
+    margin-left: -300px;
+    margin-right: -300px;
+    position: absolute;
+    left: 50%;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    display: none;
+    z-index: 99;
+
+}
+.dialog-header{
+    padding: 58px 70px;
+    font-size: 47px;
+    font-weight: 500;   
+}
+
+
+.dialog-body{
+    padding:0 70px; 
+
+}
+.dialog-confirm-btn{
+    padding: 15px 70px 0;
+    margin-bottom: 20px;
+}
+.dialog-tips-box{
+    padding: 0 70px;
+}
+.dialog-body-params{
+    margin-bottom: 20px;
+}
+.dialog-another-body-element{
+    margin-bottom: 20px;
+}
+.js-label{
+    display: block;
+    width: 100%;
+    color: #5d5d5d;
+    font-size: 16px;
+    line-height: 36px;
+    
+}
+.js-input{
+    display: block;
+    width: 100%;
+    font-size: 21px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    border-bottom: 1px solid #bbbbbb;
+    
+
+}
+.error-message{
+    font-size: 14px;
+    color: #ff4246;
+    line-height: 30px;
+    display: none;
+
+}
+
+.confirm-btn{
+    width: 100%;
+    height: 44px;
+    outline: none;
+    background-color: #3ca0d9;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+}
+.close-btn{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background-image: url(./img/close.png);
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+    background-color:transparent;
+
+}
+.btns{
+    width: 310px;
+    margin: 0 auto;
+
+}
+.sign-up,.sign-in,.reset{
+    font-size: 15px;
+    width: 100px;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid #000;
+    outline: none;
+    border-radius: 30px;
+   
+}
+.sign-up:hover,.sign-in:hover,.reset:hover{
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .7);
+}
+
+
