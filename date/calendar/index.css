@@ -1,0 +1,60 @@
+*{
+     margin:0;
+     padding:0;
+ }
+body{
+     font:12px/1.125 Microsoft YaHei;
+     background:#fff;
+ }
+ul, li{
+     list-style:none;
+ }
+a{
+     text-decoration:none;
+ }
+.wrap{
+     height:350px;
+     text-align:center;
+     margin:150px auto;
+}
+.inner{
+     padding:15px;
+ }
+.cale-wrap{
+    padding:20px;
+}
+.clearfix{
+     overflow:hidden;
+     _zoom:1;
+ }
+.calendar{
+    width:400px;
+    padding:20px;
+    margin:0 auto;
+}
+.form-control{
+    width: 300px;
+    height: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 14px;
+    border:1px solid;
+}
+.my-date{
+    position:absolute;
+    width: 200px;
+    height: 200px;
+}
+.table-condensed{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(229, 194, 194);
+    border-radius: 10px;
+    padding: 10px;
+}
+.table-condensed > tbody >tr > td{
+    cursor: pointer;
+}
+.none{
+    display:none;
+}
