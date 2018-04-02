@@ -13,14 +13,14 @@ class Index extends React.Component{
                 <div className = 'single-page'>
                     <h2>Single Page</h2>
                     <ul className = 'nav-list'>
-                        <li><NavLink exact activeClassName = 'active' to = '/'>首页</NavLink></li>
-                        <li><NavLink activeClassName = 'active' to = '/message'>消息</NavLink></li>
-                        <li><NavLink activeClassName = 'active' to = '/aboutme'>我</NavLink></li>
+                        <li><NavLink exact activeClassName = 'active' to = '/content/single_page/index.html'>首页</NavLink></li>
+                        <li><NavLink activeClassName = 'active' to = '/content/single_page/index.html/message'>消息</NavLink></li>
+                        <li><NavLink activeClassName = 'active' to = '/content/single_page/index.html/aboutme'>我</NavLink></li>
                     </ul>
                    
-                    <Route exact path = '/' component = {Home}/>
-                    <Route path = '/message' component = {Message}/>
-                    <Route path = '/aboutme' component = {Aboutme}/>
+                    <Route exact path = '/content/single_page/index.html' component = {Home}/>
+                    <Route path = '/content/single_page/index.html/message' component = {Message}/>
+                    <Route path = '/content/single_page/index.html/aboutme' component = {Aboutme}/>
                     
                 </div>
             </BrowserRouter>
