@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>物体移动</title>
+    <style>
+        .move-box{
+            width: 99px;
+            height: 99px;
+            background:#000;
+            position: absolute;
+            left: 0;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class = 'move-box'></div>
+    <div>
+        <button class = 'move-btn'>移动</button>
+        <button class = 'stop-btn'>停止移动</button>
+    </div>
+</body>
+<script>
+    window.onload = function(){
+        var moveBtn = document.getElementsByClassName('move-btn')[0];
+        var stopBtn = document.getElementsByClassName('stop-btn')[0];
+        var moveBox = document.getElementsByClassName('move-box')[0];
+        var timer = null;
+        var l;
+        var dw;
+        
+        moveBtn.onclick = function(){
+            clearInterval(timer);
+            timer = setInterval(function(){
+                 moveBox.style.left = moveBox.offsetLeft + 5 + 'px';
+            },20)
+        }
+        stopBtn.onclick = function(){
+            clearInterval(timer);
+        }
+    }
+</script>
+</html>

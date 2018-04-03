@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>物体跟随鼠标</title>
+    <style>
+        div{
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            background-color: #000;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+</body>
+<script>
+    window.onload=function(){
+                var oDiv=document.getElementsByTagName('div');
+                var i=0;
+
+                document.onmousemove=function(ev){
+                    var oEvent=event||ev;
+                    //var scrollLeft=document.documentElement.scrollLeft||document.body.scrollLeft;
+                    //var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+                    //第一个要跟着鼠标走,不用循环，所以为length-1
+                    for(i=oDiv.length-1;i>0;i--){
+                        oDiv[i].style.left=oDiv[i-1].style.left;
+                        oDiv[i].style.top=oDiv[i-1].style.top;
+                    }
+                    oDiv[0].style.left=oEvent.clientX+'px';
+                    oDiv[0].style.top=oEvent.clientY+'px';
+
+                }
+
+            }
+</script>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>分享至菜单</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #div-box {
+            width: 100px;
+            height: 200px;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+            position: absolute;
+            left: -100px;
+            border-radius: 8px;
+            padding: 10px;
+
+        }
+
+        #btn {
+            position: absolute;
+            width: 20px;
+            height: 70px;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            left: 100px;
+            top: 70px;
+            background-color: rgb(88, 165, 209);
+            font-size: 14px;
+        }
+
+        .list {
+            list-style: none;
+        }
+
+        .list-item {
+            padding: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div-box" class="">
+        <ul class='list'>
+            <li class='list-item'>微信</li>
+            <li class='list-item'>微博</li>
+            <li class='list-item'>QQ</li>
+            <li class='list-item'>知乎</li>
+            <li class='list-item'>豆瓣</li>
+            <li class='list-item'>facebook</li>
+        </ul>
+        <span id="btn">分享至</span>
+    </div>
+</body>
+<script>
+    window.onload = function () {
+        var oDiv = document.getElementById('div-box');
+
+        oDiv.onmouseover = function () {
+            startMove(10, 0);
+
+        }
+        oDiv.onmouseout = function () {
+            startMove(-10, -100);
+        }
+
+    }
+    var timer = null;
+
+    function startMove(ispeed, iTarget) {
+        var oDiv = document.getElementById('div-box');
+        clearInterval(timer);
+
+        timer = setInterval(function () {
+
+            if (oDiv.offsetLeft == iTarget) {
+                clearInterval(timer);
+
+            } else {
+                oDiv.style.left = oDiv.offsetLeft + ispeed + 'px';
+
+            }
+        }, 30)
+    }
+
+</script>
+
+</html>
