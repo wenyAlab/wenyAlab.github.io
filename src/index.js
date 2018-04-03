@@ -6,6 +6,8 @@ const  data = [
             { title : 'list'},
             { url : 'list/timer/index.html', title : '简单计数器--redux' },
             { url : 'list/dialog/index.html', title : '对话框--面向对象' },
+            { url : 'list/default_menu/index.html', title : '自定义系统右键菜单' },
+
 
            
             
@@ -14,6 +16,14 @@ const  data = [
             { title : 'image'},
             { url : 'image/index1.html', title : '图片罩层' }
             
+        ],
+        [
+            { title:'movement'},
+            { url:'movement/index1.html',title:'物体移动'},
+            { url : 'movement/index2.html', title : '跟随鼠标移动' },
+            { url : 'movement/index3.html', title : '分享至菜单' }
+
+
         ],
         [
             { title : 'content'},
