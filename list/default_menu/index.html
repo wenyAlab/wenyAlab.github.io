@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>default_menu</title>
+    <style>
+        html,body,ul,li,span{
+            margin: 0;
+            padding: 0;
+
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 15px;
+        }
+        .menu-list{
+            width: 120px;
+            height: 200px;
+            background-color: rgb(241, 240, 240);
+            color: black;
+            position: absolute;
+            display: none;
+            list-style: none;
+            box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 2px 0px, rgba(0, 0, 0, 0.18) 0px 0px 0px 1px;
+            border-radius: 8px;
+        }
+        .menu-item{
+            margin-bottom: 4px;
+        }
+        .menu-item:hover{
+            background-color: rgb(12, 149, 240);
+            color: #fff;
+        }
+        .menu-item>span{
+            display: block;
+            margin: 5px 0px 0px 10px;
+        }
+    </style>
+</head>
+<body>
+    <ul class = 'menu-list'>
+        <li class = 'menu-item'>
+            
+         <span>新建文件夹</span></li>
+        <li class = 'menu-item'> <span>显示简介</span></li>
+        <li class = 'menu-item'> <span>更改桌面背景</span></li>
+        <li class = 'menu-item'> <span>整理</span></li>
+        <li class = 'menu-item'> <span>整理方式</span></li>
+        <li class = 'menu-item'> <span>排序方式</span></li>
+        <li class = 'menu-item'>
+            
+         <span>查看显示选项</span></li>
+    </ul>
+</body>
+<script>
+    window.oncontextmenu = function(ev){
+        var oEvent  = event || ev;
+        var menuList = document.getElementsByClassName('menu-list')[0];
+        menuList.style.display = 'block';
+        menuList.style.left = oEvent.clientX + 'px';
+        menuList.style.top = oEvent.clientY + 'px';
+
+        return false;
+    }
+
+    document.onclick = function(){
+        var menuList = document.getElementsByClassName('menu-list')[0];
+        menuList.style.display = 'none';
+    }
+    
+
+    
+</script>
+</html>
