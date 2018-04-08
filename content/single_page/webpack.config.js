@@ -20,12 +20,20 @@ module.exports = {
                         'react'
                     ]
                 }
+            },
+            {
+                test:/\.css$/,
+                use:[
+                    'style-loader',
+                    'css-loader'
+                ]
             }
         ]
     },
     devServer:{
         contentBase:'./',
         inline:true,
-        port:4000
+        port:4000,
+        historyApiFallback: true
     }
 }
