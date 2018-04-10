@@ -11,7 +11,7 @@ const news = [
     },
     {
         topic:'yaya',
-        content:'new project'
+        content:'a new project'
     }
 ]
 
