@@ -36,7 +36,7 @@ const  data = [
             
         ],
         [
-            {title:'css3'},
+            {title:'css3 animation'},
             { url : 'css3/animationTranslate/loadingAnimation.html', title : 'css3实现loading动画--translate' },
             { url : 'css3/animationRotate/loadingAnimation.html', title : 'css3实现loading动画--rotate' },
 
