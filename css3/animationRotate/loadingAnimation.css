@@ -1,0 +1,20 @@
+#root{
+    width: 60px;
+    height: 60px;
+    border: 3px solid #000;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    animation: loading ease-in-out 1s infinite;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+@keyframes loading {
+    from {
+        transform: rotate(0deg) translate3d(0,0,0)
+    }
+    to{
+        transform: rotate(360deg) translate3d(0,0,0)
+    }
+}
