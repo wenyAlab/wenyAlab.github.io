@@ -7,11 +7,11 @@ const news = [
     },
     {
         topic:'haha',
-        content:'be a happy day'
+        content:'react-router single-page'
     },
     {
         topic:'yaya',
-        content:'you are cool'
+        content:'new project'
     }
 ]
 
