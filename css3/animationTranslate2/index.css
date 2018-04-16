@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.css-container {
+  width: 50px;
+  height: 60px;
+  text-align: center;
+  font-size: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.css-container > div {
+    background-color: #000;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+    animation: cssloading 1.2s infinite ease-in-out;
+  }
+   
+  .css-container .animation2 {
+    animation-delay: -1.1s;
+  }
+   
+  .css-container .animation3 {
+    animation-delay: -1.0s;
+  }
+   
+  .css-container .animation4 {
+    animation-delay: -0.9s;
+  }
+   
+  .css-container .animation5 {
+    animation-delay: -0.8s;
+  }
+   
+  @keyframes cssloading {
+    0%, 40%, 100% {
+      transform: scaleY(0.4);
+    }  20% {
+      transform: scaleY(1.0);
+    }
+  }
