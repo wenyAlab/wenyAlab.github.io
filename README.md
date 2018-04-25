@@ -22,3 +22,5 @@ hello,我叫马微，一枚前端er。在2017年之前，我还是一个努力�
 - 邮箱：weny@annyandandy.com
 - 毕业时间：2018年6月
 - 求职意向：web前端开发工程师
+
+![GravatarImage](https://github.com/wenyAlab/wenyAlab.github.io/raw/master/WechatIMG153_tiny.jpeg)
